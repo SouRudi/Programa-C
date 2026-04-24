@@ -18,7 +18,7 @@ int main() {
         printf("\nAluno %d\n", i + 1);
 
         printf("Nome: ");
-        scanf(" %[^\n]", nome);  // lê nome com espaço
+        scanf(" %[^\n]", nome);
 
         printf("Idade: ");
         scanf("%d", &idade);
