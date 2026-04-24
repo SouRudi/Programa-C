@@ -31,7 +31,23 @@ int main() {
 
     fclose(arquivo);
 
-    printf("\nArquivo criado com sucesso!\n");
+    arquivo = fopen("alunos.txt", "r");
+
+    if (arquivo == NULL) {
+        printf("Erro ao abrir para leitura.\n");
+        return 1;
+    }
+
+    char linha[100];
+
+    printf("\n--- Dados salvos ---\n");
+
+    while (fgets(linha, sizeof(linha), arquivo) != NULL) {
+        printf("%s", linha);
+    }
+
+    fclose(arquivo);
 
     return 0;
 }
+
